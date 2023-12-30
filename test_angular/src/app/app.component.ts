@@ -48,7 +48,6 @@ export class AppComponent implements OnInit {
      dialogRef.afterClosed().subscribe({
       next: (val: any) => {
         if(val) {
-          console.log(val)
           this.getChampions()
         }
       },
@@ -63,13 +62,11 @@ export class AppComponent implements OnInit {
       dialogRef.afterClosed().subscribe({
         next: (val) => {
           if(val) {
-            console.log(val)
             this.getChampions()
           }
         },
         error : (err) => console.log(err)
        })
-      console.log("On edit "+ Object.values(data))
     }
   
     ngOnInit(): void {

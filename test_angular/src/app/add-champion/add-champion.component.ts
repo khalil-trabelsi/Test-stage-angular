@@ -56,7 +56,6 @@ export class AddChampionComponent implements OnInit {
       {
         this.championService.save(this.championForm.value).subscribe({
           next: (data) => {
-            console.log(data)
             this.dialogRef.close(true);
             this.customBarService.openSnackBar("Champion created successfully! !")
           },
