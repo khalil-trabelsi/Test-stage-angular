@@ -1,0 +1,29 @@
+/* || Bootstrap icons */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+/* || Core Grid CSS */
+@import 'ag-grid-community/styles/ag-grid.css';
+/* || Alpine Theme Specific CSS */
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+/* || General styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body { 
+    height: 100%;
+}
+body { 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #f2f4f8;
+}
+
+ul {
+    list-style: none;
+    padding: 0 !important;
+}
+a {
+    text-decoration: none;
+}
+
+

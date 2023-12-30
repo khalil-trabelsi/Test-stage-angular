@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <!-- Side menu -->
+  <aside class="side-menu">
+    <div class="side-menu-head">
+     <img src="../assets/imgs/logo.jpg">
+    </div>
+    <nav>
+        <ul>
+          <li class="nav-item">
+            <a href="/" class="nav-link active">
+              <i class="bi bi-person-badge-fill"></i>
+              <span class="nav-link-title"> Champions</span>   
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" (click)="handleAddchampion()">
+              <i class="bi bi-person-fill-add"></i>
+              <span class="nav-link-title"> Add</span>   
+            </a>
+          </li>
+     
+        </ul>
+    </nav>
+</aside>
+  <!-- Main content  -->
+  <div class="wrapper-r">
+    <div class="main-content">
+      <div class="container">
+          <div class="card-heading">
+              <h4 class="card-heading-title">
+                  Champions
+              </h4>
+          </div>
+          <div>
+              <ag-grid-angular   class="ag-theme-alpine"
+              style="height: 550px;width: 100%;" [rowData]="rowData" [columnDefs]="colDefs" [defaultColDef]="defaultColDef"
+              [rowSelection]="'multiple'"
+              [animateRows]="true"
+              [pagination]="true"
+              [gridOptions]="gridOptions"
+              ></ag-grid-angular>
+          </div>
+      </div>
+  </div>  </div>
+</div>
+

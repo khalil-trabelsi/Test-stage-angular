@@ -1,0 +1,9 @@
+.actions {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+
+}
+.actions .btn {
+    flex: 1;
+}

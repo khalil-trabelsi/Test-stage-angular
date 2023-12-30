@@ -1,0 +1,147 @@
+.wrapper {
+    position: relative;
+}
+.wrapper-r {
+    margin-left: 230px;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fdf9ff;
+    width: 230px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.side-menu-head {
+    position: absolute;
+    top: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+ 
+}
+.side-menu-head img {
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side-menu nav {
+    position: absolute;
+    top: 180px;
+}
+.side-menu nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.side-menu .nav-item {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.side-menu .nav-item .nav-link  {
+    font-weight: 500;
+    font-size: 17px;
+    padding: 10px 30px;
+    color: rgba(0,0,0, 0.6);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu .nav-item .nav-link i {
+    font-size: 19px;
+    margin-right: 4px;
+}
+.nav-link.active {
+    position: relative;
+    font-weight: 600 !important;
+    color: #000 !important;
+
+}
+.main-content {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.main-content .container {
+    padding-top: 35px;
+}
+.card-heading {
+    margin-bottom: 45px;
+}
+.card-heading-title {
+    position: relative;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 0;
+}
+.card-heading-title::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #b1b0b0;
+}
+
+@media screen and (max-width: 567px) {
+    .card-heading-title {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .side-menu {
+      width: 50px;  
+    }
+    .side-menu-head img {
+        width: 40px;
+    }
+    .wrapper-r {
+        margin-left: 50px;
+    }
+    .side-menu .nav-item .nav-link .nav-link-title  {
+        display: none;
+    }
+
+    .side-menu .nav-item .nav-link {
+        font-size: 16px;
+    }
+    .side-menu:hover {
+        width: 140px;
+    } 
+    .side-menu:hover .nav-item .nav-link .nav-link-title  {
+        display: inline;
+        font-size: 16px;
+    }
+ 
+}
+@media screen and (min-width: 568px) and (max-width: 768px) {
+    .side-menu {
+      width: 135px;  
+    }
+    .side-menu-head img {
+        width: 40px;
+    }
+    .wrapper-r {
+        margin-left: 135px;
+    }
+
+}

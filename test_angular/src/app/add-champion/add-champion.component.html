@@ -1,0 +1,43 @@
+<div mat-dialog-title>
+Champion form
+</div>
+<form action="" [formGroup]="championForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="">
+            <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Ex. the Unforgiven" formControlName="title" required>
+                  </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Key</mat-label>
+                    <input matInput placeholder="Ex. Yasuo" formControlName="key" required>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Ex. Yasuo" formControlName="name" required="">
+                  </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+                <mat-form-field appearance="outline" >
+                    <mat-label>Tags</mat-label>
+                    <mat-select multiple="true" formControlName="tags" required="">
+                      <mat-option *ngFor="let tag of tagsOption" [value]="tag">{{tag}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div mat-dialog-actions class="actions">
+            <button mat-raised-button class="btn btn-outline-secondary " [mat-dialog-close]="false">Cancel</button>
+            <button mat-raised-button class="btn btn-outline-primary " type="submit">{{data ? "Update" : "Save"}}</button>
+    </div>       
+</div>
+</form>
+
+
